@@ -63,6 +63,11 @@ img {
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Refined shadow for depth */
+  transition: top 0.4s ease-in-out;
+}
+
+.top-bar--hidden {
+  top: -150px; /* A value safely larger than the bar's height */
 }
 
 .top-bar-heading {
