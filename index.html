@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
-    <!-- Add Babel to transpile JSX in the browser -->
+    
+    <!-- Add Babel to transpile JSX/TSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-<body>
+    
+    <!-- The importmap defines where to get React from -->
     <script type="importmap">
       {
         "imports": {
@@ -22,8 +23,16 @@
         }
       }
     </script>
+</head>
+<body>
     <div id="root"></div>
-    <!-- Change script type to "text/babel" for Babel to transpile it -->
-    <script type="text/babel" src="./index.tsx"></script>
+    
+    <!-- 
+      This script tag is now correctly configured for Babel:
+      - type="text/babel": Tells the browser this script needs to be processed by Babel.
+      - data-type="module": Tells Babel that this script uses ES module features (import/export).
+      - data-presets="react,typescript": This is the key fix. It tells Babel to use the presets for both React (to handle JSX) and TypeScript (to handle TS syntax).
+    -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
 </body>
 </html>
