@@ -19,6 +19,7 @@ const InfoSection = ({ title, children, imageUrl, imagePosition = 'left' }) => {
       <div className="info-content">
         <h3>{title}</h3>
         {children}
+        {/* FIX: Corrected variable name from Luminous_REHAB_URL to LUMINOUS_REHAB_URL */}
         <a href={LUMINOUS_REHAB_URL} target="_blank" rel="noopener noreferrer" className="learn-more-button">
           Learn More at Luminous Rehab
         </a>
@@ -34,6 +35,7 @@ function App() {
       <div className="top-bar">
         <div className="top-bar-heading">
           <div className="top-bar-title">Physical Therapy Consultation</div>
+          {/* FIX: Added missing '<' to the div tag */}
           <div className="top-bar-subtitle">Your First Step Towards Recovery & Wellness</div>
         </div>
         <a href={LUMINOUS_REHAB_URL} target="_blank" rel="noopener noreferrer" className="top-bar-button">
