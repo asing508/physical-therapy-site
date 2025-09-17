@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
 */
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
 
 const LUMINOUS_REHAB_URL = 'https://www.luminousrehab.com/';
@@ -19,7 +19,6 @@ const InfoSection = ({ title, children, imageUrl, imagePosition = 'left' }) => {
       <div className="info-content">
         <h3>{title}</h3>
         {children}
-        {/* FIX: Corrected variable name from Luminous_REHAB_URL to LUMINOUS_REHAB_URL */}
         <a href={LUMINOUS_REHAB_URL} target="_blank" rel="noopener noreferrer" className="learn-more-button">
           Learn More at Luminous Rehab
         </a>
@@ -30,12 +29,36 @@ const InfoSection = ({ title, children, imageUrl, imagePosition = 'left' }) => {
 
 
 function App() {
+  const [isTopBarVisible, setIsTopBarVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY.current;
+
+      // Hide if scrolling down (and not near the top), show if scrolling up
+      if (isScrollingDown && currentScrollY > 10) {
+        setIsTopBarVisible(false);
+      } else {
+        setIsTopBarVisible(true);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="top-bar">
+      <div className={`top-bar ${!isTopBarVisible ? 'top-bar--hidden' : ''}`}>
         <div className="top-bar-heading">
           <div className="top-bar-title">Physical Therapy Consultation</div>
-          {/* FIX: Added missing '<' to the div tag */}
           <div className="top-bar-subtitle">Your First Step Towards Recovery & Wellness</div>
         </div>
         <a href={LUMINOUS_REHAB_URL} target="_blank" rel="noopener noreferrer" className="top-bar-button">
@@ -135,7 +158,7 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 Luminous Rehab. All Rights Reserved. This is an informational page.</p>
+          <p>&copy; Physical Therapy Consultation. All Rights Reserved. This is an informational page.</p>
         </div>
       </footer>
     </>
