@@ -8,11 +8,9 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232563EB'><path d='M7.5,0V7.5H0v1H7.5V16h1V8.5H16v-1H8.5V0Z'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"></noscript>
     <link rel="stylesheet" href="./index.css">
-    
-    <!-- Add Babel to transpile JSX/TSX in the browser -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
     <!-- The importmap defines where to get React from -->
     <script type="importmap">
@@ -30,11 +28,9 @@
     <div id="root"></div>
     
     <!-- 
-      This script tag is now correctly configured for Babel:
-      - type="text/babel": Tells the browser this script needs to be processed by Babel.
-      - data-type="module": Tells Babel that this script uses ES module features (import/export).
-      - data-presets="react,typescript": This is the key fix. It tells Babel to use the presets for both React (to handle JSX) and TypeScript (to handle TS syntax).
+      The Babel script has been removed. 
+      The script below is now a standard ES module, loading pre-compiled JavaScript.
     -->
-    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
