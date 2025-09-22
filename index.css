@@ -54,20 +54,20 @@ img {
 .top-bar {
   background-color: var(--black-bar);
   color: white;
-  padding: 2.25rem 2.5rem; /* Slightly thicker for balance */
+  padding: 2.25rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Refined shadow for depth */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
   transition: top 0.4s ease-in-out;
 }
 
 .top-bar--hidden {
-  top: -150px; /* A value safely larger than the bar's height */
+  top: -150px;
 }
 
 .top-bar-heading {
@@ -76,24 +76,24 @@ img {
 }
 
 .top-bar-title {
-  font-weight: 700; /* Bolder */
-  font-size: 1.8rem; /* Bigger */
+  font-weight: 700;
+  font-size: 1.8rem;
   line-height: 1.2;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Subtle pop */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
   margin: 0;
 }
 
 .top-bar-subtitle {
-  font-size: 1rem; /* Bigger */
+  font-size: 1rem;
   font-weight: 300;
-  opacity: 0.9; /* More visible */
-  margin-top: 0.25rem; /* Better spacing */
+  opacity: 0.9;
+  margin-top: 0.25rem;
 }
 
 .top-bar-button {
   background-color: transparent;
   color: white;
-  padding: 0.7rem 1.5rem; /* Adjusted padding */
+  padding: 0.7rem 1.5rem;
   border: 2px solid white;
   border-radius: 6px;
   font-weight: 500;
@@ -106,10 +106,10 @@ img {
 .top-bar-button:hover {
   background-color: white;
   color: var(--black-bar);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6); /* Added glow effect */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
-/* Header - Removed, kept for potential future use or reference */
+/* Header */
 .header {
   padding: 2rem 0;
 }
@@ -136,15 +136,24 @@ img {
   text-align: center;
 }
 
-.hero h2 {
+/* H1 specific styling for SEO */
+.hero h1 {
   font-size: 3.5rem;
   font-weight: 700;
   color: var(--dark-text);
   line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
-.hero h2 span {
+.hero h1 span {
   color: var(--primary-blue);
+}
+
+.hero h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--body-text);
+  margin-bottom: 1rem;
 }
 
 .hero p {
@@ -177,6 +186,14 @@ img {
   margin-bottom: 2rem;
 }
 
+.quick-nav h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--dark-text);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
 .quick-nav ul {
   list-style: none;
   display: flex;
@@ -206,7 +223,6 @@ img {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
 }
-
 
 /* Info Section */
 .info-section {
@@ -301,20 +317,104 @@ img {
   transform: translateY(-2px);
 }
 
+/* Additional Resources Section */
+.resources-section {
+  background-color: var(--background-gradient-end);
+  padding: 3rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.resources-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--dark-text);
+  margin-bottom: 2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.resource-card h3 {
+  color: var(--dark-text);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.resource-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.resource-card a {
+  font-weight: 500;
+}
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-  border-top: 1px solid var(--border-light);
-  color: var(--body-text);
+  background-color: var(--black-bar);
+  color: white;
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
 }
 
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: rgba(255,255,255,0.8);
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.6);
+}
 
 /* Responsive Design */
 @media (max-width: 900px) {
-  .hero h2 {
+  .hero h1 {
     font-size: 2.8rem;
   }
   .info-section {
@@ -347,8 +447,11 @@ img {
   .top-bar-button {
     width: 100%;
   }
-  .hero h2 {
+  .hero h1 {
     font-size: 2.2rem;
+  }
+  .hero h2 {
+    font-size: 1.2rem;
   }
   .logo h1 {
     font-size: 2rem;
@@ -358,5 +461,8 @@ img {
   }
   .info-content h3 {
     font-size: 1.8rem;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
   }
 }
