@@ -1,5 +1,7 @@
 {
-  "name": "Physical Therapy Info Page",
-  "description": "An informational webpage about Physical Therapy Consultation, styled after Luminous Rehab.",
+  "name": "Physical Therapy Consultation Guide - Expert PT Services",
+  "description": "Comprehensive guide to physical therapy consultations with expert advice on first visits, personalized treatment plans, and recovery strategies for pain management and rehabilitation.",
+  "keywords": "physical therapy, PT consultation, rehabilitation, pain management, sports injuries, post-surgical recovery",
+  "author": "Physical Therapy Experts",
   "requestFramePermissions": []
 }
