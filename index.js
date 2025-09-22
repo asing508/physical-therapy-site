@@ -37,6 +37,58 @@ const InfoSection = ({ id, title, children, imageUrl, imagePosition = 'left', im
   );
 };
 
+// Social Share Component
+const SocialShare = () => {
+  const pageUrl = 'https://www.luminousrehab.com/physical-therapy-consultation';
+  const pageTitle = encodeURIComponent('Physical Therapy Consultation Guide | Luminous Rehab');
+  const pageDescription = encodeURIComponent('Your expert guide to a PT consultation. Learn what to expect on your first visit, benefits of a custom plan, and how to start your recovery.');
+
+  const socialLinks = [
+    {
+      name: 'Facebook',
+      url: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+      icon: React.createElement('svg', { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "currentColor" }, 
+        React.createElement('path', { d: "M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z" })
+      )
+    },
+    {
+      name: 'X (Twitter)',
+      url: `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`,
+      icon: React.createElement('svg', { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "currentColor" }, 
+        React.createElement('path', { d: "M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.212 3.793 4.649-.65.177-1.354.23-2.064.077.608 1.881 2.373 3.256 4.466 3.293-1.728 1.356-3.899 2.166-6.265 2.166-.413 0-.82-.024-1.22-.074 2.233 1.442 4.881 2.28 7.733 2.28 9.281 0 14.363-7.693 14.363-14.363 0-.218-.005-.436-.014-.652.984-.71 1.836-1.599 2.52-2.616z" })
+      )
+    },
+    {
+      name: 'LinkedIn',
+      url: `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}&summary=${pageDescription}`,
+      icon: React.createElement('svg', { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "currentColor" }, 
+        React.createElement('path', { d: "M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" })
+      )
+    }
+  ];
+
+  return React.createElement('section', { className: 'social-share-section' },
+    React.createElement('div', { className: 'container' },
+      React.createElement('h2', null, 'Share This Guide'),
+      React.createElement('div', { className: 'social-share-grid' },
+        socialLinks.map(link => 
+          React.createElement('a', {
+            key: link.name,
+            href: link.url,
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            className: 'social-share-button',
+            'aria-label': `Share on ${link.name}`
+          },
+            link.icon,
+            React.createElement('span', null, `Share on ${link.name}`)
+          )
+        )
+      )
+    )
+  );
+};
+
 const sectionData = [
     {
         id: 'what-is-a-consultation',
@@ -263,7 +315,8 @@ function App() {
             )
           )
         )
-      )
+      ),
+      React.createElement(SocialShare, null)
     ),
     React.createElement('footer', { className: 'footer' },
       React.createElement('div', { className: 'container' },
