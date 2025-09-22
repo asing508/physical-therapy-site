@@ -367,6 +367,45 @@ img {
   font-weight: 500;
 }
 
+/* Social Share Section */
+.social-share-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+.social-share-section h2 {
+  font-size: 2rem;
+  color: var(--dark-text);
+  margin-bottom: 2rem;
+}
+.social-share-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.social-share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-light);
+  color: var(--body-text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.social-share-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+.social-share-button svg {
+  color: var(--primary-blue);
+}
+
 /* Footer */
 .footer {
   background-color: var(--black-bar);
@@ -464,5 +503,11 @@ img {
   }
   .footer-content {
     grid-template-columns: 1fr;
+  }
+  .social-share-button span {
+    display: none; /* Hide text on small screens */
+  }
+  .social-share-button {
+    padding: 0.75rem; /* Make buttons more square */
   }
 }
