@@ -1,7 +1,7 @@
 {
-  "name": "Physical Therapy Consultation Guide | Luminous Rehab",
-  "description": "Your expert guide to a physical therapy consultation. Learn what to expect on your first visit, the benefits of a custom plan, and how we treat pain. Start your recovery today.",
-  "keywords": "physical therapy, PT consultation, rehabilitation, pain management, sports injuries, post-surgical recovery",
+  "name": "First Physical Therapy Consultation Guide | Luminous Rehab",
+  "description": "Discover what happens during your first physical therapy consultation. Get a personalized plan for pain relief, mobility, and faster recovery. Book today!",
+  "keywords": "first physical therapy visit, PT consultation, pain relief, mobility restoration, personalized rehab plan, sports injury recovery, post-surgery rehab",
   "author": "Luminous Rehab",
-  "robots": "index, follow"
+  "requestFramePermissions": []
 }
