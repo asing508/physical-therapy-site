@@ -33,10 +33,12 @@ const InfoSection = ({ id, title, children, imageUrl, imagePosition = 'left', im
     React.createElement('div', { className: 'info-content' },
       React.createElement('h2', null, title), // Changed from h3 → h2 for better heading hierarchy
       children,
-      React.createElement('a', { 
-        href: getInternalLink(id), // ✅ Internal link for SEO
+      React.createElement('a', {
+        href: getInternalLink(id),
         className: 'learn-more-button',
-        'aria-label': `Learn more about ${title}`
+        'aria-label': `Learn more about ${title}`,
+        target: '_blank', // Open in a new tab
+        rel: 'noopener noreferrer' // Security best practice
       },
         'Learn More'
       )
