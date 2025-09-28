@@ -8,14 +8,15 @@ const { useState, useEffect, useRef, Fragment } = React;
 
 // Map section IDs to internal paths for SEO-friendly internal linking
 const getInternalLink = (id) => {
+  const baseUrl = 'https://www.luminousrehab.com';
   const map = {
-    'what-is-a-consultation': '/services',
-    'first-visit-expectations': '/first-visit',
-    'benefits-of-a-plan': '/treatment-plans',
-    'common-conditions': '/conditions-we-treat',
-    'your-role-in-recovery': '/patient-resources'
+    'what-is-a-consultation': `${baseUrl}/services`,
+    'first-visit-expectations': `${baseUrl}/faq`,
+    'benefits-of-a-plan': `${baseUrl}/about`,
+    'common-conditions': `${baseUrl}/services`,
+    'your-role-in-recovery': `${baseUrl}/blog`
   };
-  return map[id] || '/contact';
+  return map[id] || `${baseUrl}/contact`;
 };
 
 // Reusable component for the alternating info sections
