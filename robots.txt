@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 
 # Provide the location of the sitemap for crawlers.
-Sitemap: https://asing508.github.io/physical-therapy-site/sitemap.xml
+Sitemap: https://homephysical.netlify.app/sitemap.xml
