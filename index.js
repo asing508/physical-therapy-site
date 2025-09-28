@@ -177,25 +177,25 @@ const resourcesData = [
     {
         title: 'Preparing for Your Visit',
         description: 'Download our comprehensive checklist.',
-        link: '/resources/consultation-checklist',
+        link: 'https://www.luminousrehab.com/patient-forms',
         linkText: 'Get Checklist'
     },
     {
         title: 'Insurance Guide',
         description: 'Understand your PT coverage.',
-        link: '/resources/insurance-guide',
+        link: 'https://www.luminousrehab.com/insurance',
         linkText: 'View Guide'
     },
     {
         title: 'Exercise Library',
         description: 'Home exercise videos & instructions.',
-        link: '/resources/exercise-library',
+        link: 'https://www.luminousrehab.com/blog',
         linkText: 'Browse Exercises'
     },
     {
         title: 'Patient Success Stories',
         description: 'Real recovery journeys.',
-        link: '/testimonials',
+        link: 'https://www.luminousrehab.com/testimonials',
         linkText: 'Read Stories'
     }
 ];
@@ -226,9 +226,11 @@ function App() {
         React.createElement('div', { className: 'top-bar-title' }, 'Physical Therapy Consultation'),
         React.createElement('div', { className: 'top-bar-subtitle' }, 'Your First Step Towards Recovery')
       ),
-      React.createElement('a', { 
-        href: '/contact', // ✅ Internal link
+      React.createElement('a', {
+        href: 'https://www.luminousrehab.com/contact',
         className: 'top-bar-button',
+        target: '_blank',
+        rel: 'noopener noreferrer',
         'aria-label': 'Schedule a consultation'
       },
         'Schedule a Consultation'
@@ -242,9 +244,11 @@ function App() {
           React.createElement('p', null,
             'A physical therapy consultation is your crucial first step towards understanding your body, managing pain, and restoring mobility. Our expert therapists provide personalized assessments that unlock your potential for recovery and wellness.'
           ),
-          React.createElement('a', { 
-            href: '/contact', // ✅ Internal link
+          React.createElement('a', {
+            href: 'https://www.luminousrehab.com/contact',
             className: 'cta-button',
+            target: '_blank',
+            rel: 'noopener noreferrer',
             'aria-label': 'Start your recovery journey'
           },
             'Start Your Recovery Journey Today'
@@ -282,9 +286,11 @@ function App() {
               React.createElement('div', { key: index, className: 'resource-card' },
                 React.createElement('h3', null, resource.title),
                 React.createElement('p', null, resource.description),
-                React.createElement('a', { 
+                React.createElement('a', {
                   href: resource.link,
-                  'aria-label': `${resource.linkText} - ${resource.title}`
+                  'aria-label': `${resource.linkText} - ${resource.title}`,
+                  target: '_blank',
+                  rel: 'noopener noreferrer'
                 }, resource.linkText)
               )
             )
@@ -297,38 +303,38 @@ function App() {
       React.createElement('div', { className: 'container' },
         React.createElement('div', { className: 'footer-content' },
           React.createElement('div', { className: 'footer-column' },
-            React.createElement('h3', null, 'Services'), // h3 under footer h2 context
+            React.createElement('h3', null, 'Services'),
             React.createElement('ul', null,
-              React.createElement('li', null, React.createElement('a', { href: '/services/orthopedic-therapy' }, 'Orthopedic Therapy')),
-              React.createElement('li', null, React.createElement('a', { href: '/services/sports-rehabilitation' }, 'Sports Rehabilitation')),
-              React.createElement('li', null, React.createElement('a', { href: '/services/manual-therapy' }, 'Manual Therapy')),
-              React.createElement('li', null, React.createElement('a', { href: '/services/post-surgical-rehab' }, 'Post-Surgical Rehab'))
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/services/orthopedic-therapy', target: '_blank', rel: 'noopener noreferrer' }, 'Orthopedic Therapy')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/services/sports-rehabilitation', target: '_blank', rel: 'noopener noreferrer' }, 'Sports Rehabilitation')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/services/manual-therapy', target: '_blank', rel: 'noopener noreferrer' }, 'Manual Therapy')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/services/post-surgical-rehab', target: '_blank', rel: 'noopener noreferrer' }, 'Post-Surgical Rehab'))
             )
           ),
           React.createElement('div', { className: 'footer-column' },
             React.createElement('h3', null, 'Resources'),
             React.createElement('ul', null,
-              React.createElement('li', null, React.createElement('a', { href: '/blog' }, 'Health Blog')),
-              React.createElement('li', null, React.createElement('a', { href: '/faq' }, 'FAQ')),
-              React.createElement('li', null, React.createElement('a', { href: '/patient-forms' }, 'Patient Forms')),
-              React.createElement('li', null, React.createElement('a', { href: '/insurance' }, 'Insurance Info'))
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/blog', target: '_blank', rel: 'noopener noreferrer' }, 'Health Blog')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/faq', target: '_blank', rel: 'noopener noreferrer' }, 'FAQ')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/patient-forms', target: '_blank', rel: 'noopener noreferrer' }, 'Patient Forms')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/insurance', target: '_blank', rel: 'noopener noreferrer' }, 'Insurance Info'))
             )
           ),
           React.createElement('div', { className: 'footer-column' },
             React.createElement('h3', null, 'Connect'),
             React.createElement('ul', null,
-              React.createElement('li', null, React.createElement('a', { href: '/contact' }, 'Contact Us')),
-              React.createElement('li', null, React.createElement('a', { href: '/locations' }, 'Our Locations')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/contact', target: '_blank', rel: 'noopener noreferrer' }, 'Contact Us')),
+              React.createElement('li', null, React.createElement('a', { href: 'https://www.luminousrehab.com/locations', target: '_blank', rel: 'noopener noreferrer' }, 'Our Locations')),
               React.createElement('li', null, React.createElement('a', { href: 'https://www.facebook.com/luminousrehab', target: '_blank', rel: 'noopener noreferrer' }, 'Facebook')),
               React.createElement('li', null, React.createElement('a', { href: 'https://www.instagram.com/luminousrehab', target: '_blank', rel: 'noopener noreferrer' }, 'Instagram'))
             )
           )
         ),
         React.createElement('div', { className: 'footer-bottom' },
-          React.createElement('p', null, '© 2024 Luminous Rehab. All Rights Reserved. | ',
-            React.createElement('a', { href: '/privacy-policy' }, 'Privacy Policy'),
+          React.createElement('p', null, '© 2025 Luminous Rehab. All Rights Reserved. | ',
+            React.createElement('a', { href: 'https://www.luminousrehab.com/privacy-policy', target: '_blank', rel: 'noopener noreferrer' }, 'Privacy Policy'),
             ' | ',
-            React.createElement('a', { href: '/terms-of-service' }, 'Terms'),
+            React.createElement('a', { href: 'https://www.luminousrehab.com/terms-of-service', target: '_blank', rel: 'noopener noreferrer' }, 'Terms'),
             ' | ',
             React.createElement('a', { href: '/sitemap.xml' }, 'Sitemap')
           )
