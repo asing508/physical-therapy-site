@@ -1,20 +1,43 @@
 # Netlify configuration file for adding custom security headers
+
+
+
 [[headers]]
+
   # Apply these headers to all pages and assets
+
   for = "/*"
+
   [headers.values]
+
     # Prevents clickjacking by stopping the site from being rendered in a frame
+
     X-Frame-Options = "DENY"
-    # Prevents browsers from trying to guess the content type, which can lead to security vulnerabilities
-    X-Content-Type-Options = "nosniff"
-    
-    # Controls how much referrer information (the page the user came from) is sent
-    Referrer-Policy = "strict-origin-when-cross-origin"
-   
-    # Controls which browser features and APIs can be used on the site
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
     
+
+    # Prevents browsers from trying to guess the content type, which can lead to security vulnerabilities
+
+    X-Content-Type-Options = "nosniff"
+
+    
+
+    # Controls how much referrer information (the page the user came from) is sent
+
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    
+
+    # Controls which browser features and APIs can be used on the site
+
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+    
+
     # A basic Content Security Policy (CSP) to prevent cross-site scripting (XSS) attacks.
+
     # This policy allows resources from the site itself ('self'), scripts from esm.sh, styles from Google Fonts,
+
     # fonts from Google Fonts, and images from unsplash.com and data URIs.
+
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:;"
