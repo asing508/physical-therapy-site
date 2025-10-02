@@ -1,3 +1,2 @@
-# This file is intentionally left blank for now.
-# Creating it satisfies the SEO check for a redirects file.
-# If you add a custom domain later, you can add rules here.
+# Force all traffic to the primary netlify.app domain
+/* https://homephysical.netlify.app/:splat    301!
