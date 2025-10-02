@@ -20,3 +20,10 @@
     # This policy allows resources from the site itself ('self'), scripts from esm.sh, styles from Google Fonts,
     # fonts from Google Fonts, and images from unsplash.com and data URIs.
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:;"
+
+# Redirect rule to handle the www subdomain check
+[[redirects]]
+  from = "https://www.homephysical.netlify.app/*"
+  to = "https://homephysical.netlify.app/:splat"
+  status = 301
+  force = true
